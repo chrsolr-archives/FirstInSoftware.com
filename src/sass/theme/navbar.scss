@@ -95,6 +95,7 @@
                 color: $color-secondary-text;
                 line-height: spacing(10);
                 position: relative;
+                text-transform: uppercase;
 
                 &:before, &:after {
                     position: absolute;

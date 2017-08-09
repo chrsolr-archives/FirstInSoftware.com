@@ -57,11 +57,7 @@ module.exports = (() => {
             {
                 author: 'Chief Dan Shelor, Champions ESD',
                 content: 'Responder360 is an invaluable tool for us. Not only are our Chiefs able to see the apparatus responding to the call but our units are able to see other apparatus responding so the potential for intersection collisions is reduced. Additionally, being able to locate the nearest hydrant or finding that elusive apartment building in the middle of the night has been a huge help. I highly recommend Responder360.'
-            },
-            {
-                author: 'Chief Fred Windisch, Ponderosa FD',
-                content: 'We are very pleased with Responder360. I have to admit at first knowledge of the product I was somewhat skeptical, but Responder360 is an effective incident management tool and upgrades are transparent to the user. We had a huge success at a large RV storage fire in July 2012. Our IC "followed" the incoming apparatus to establish a 1,500 feet 5 inch relay from a hydrant. He "saw" which engine would be next and he assigned them to pump the plug. The third engine laid out its 1,000 feet of hose to the relay pumper at the scene and then continued to the fire where the attack engine was working. The fourth engine laid out the final 500 feet from the relay pumper and connected to the second engine that fed the attack engine. This all happened within MINUTES because the IC had the opportunity to SEE the roads, facility via Google Earth, the hydrant locations, incoming apparatus and apparatus locations. It doesn\'t get any better than that!'
-            },
+            }
         ]
     };
 

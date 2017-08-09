@@ -46,3 +46,26 @@
 p {
     padding: 1rem 0;
 }
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-transparent {
+    margin: spacing(4);
+    background-color: transparent;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: $font-weight-light;
+    border-radius: spacing(6);
+    border: 1px solid $color-white;
+    padding: spacing(3) spacing(4);
+    transition: all 250ms ease-in-out;
+    font-size: 1rem;
+
+    &:hover, &:focus, &:active {
+        background-color: $color-white;
+        color: $color-brand-primary;
+    }
+}

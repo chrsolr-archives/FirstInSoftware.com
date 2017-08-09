@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch-sass",
-    "postinstall": "bower cache clean && bower install"
+    "postinstall": "bower cache clean && bower install",
+    "dev": "lite-server"
   },
   "author": "Christian Soler",
   "license": "ISC",

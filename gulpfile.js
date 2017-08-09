@@ -33,6 +33,15 @@ gulp.task('minify-autoprefixer', ['sass-compile'], () =>
         .pipe(gulp.dest(config.paths.CSS))
 );
 
+gulp.task('js-compile', () =>
+    gulp.src(['./src/js/home.js'])
+        .pipe(glp.concat('script.js'))
+        .pipe(gulp.dest('./dist/js/'))
+        .pipe(glp.rename('script.min.js'))
+        .pipe(glp.uglify())
+        .pipe(gulp.dest('./dist/js/'))
+)
+
 gulp.task('move-assets', () =>
     gulp.src(['./src/assets/**.*'], { base: 'src/' })
         .pipe(gulp.dest('./dist'))
@@ -46,4 +55,4 @@ gulp.task('watch-views', () =>
     gulp.watch('./src/views/**/*.pug', ['view-home'])
 );
 
-gulp.task('default', ['view-home', 'minify-autoprefixer', 'move-assets']);
+gulp.task('default', ['view-home', 'js-compile', 'minify-autoprefixer', 'move-assets']);

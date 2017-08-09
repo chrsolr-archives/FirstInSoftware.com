@@ -1,0 +1,21 @@
+@import "./partials/_utils";
+
+html {
+    font-size: $font-size-base;
+
+    body {
+        background-color: $color-bg-primary;
+        color: $color-primary-text;
+        font-family: $montserrat;
+        font-weight: $font-weight-regular;
+        font-size: $font-size-base;
+
+        .main-wrapper {
+            min-height: spacing(20, vh);
+            background-color: $color-bg-primary;
+            padding-top: $navbar-height + 20px;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}

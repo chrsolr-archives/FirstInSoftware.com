@@ -1,5 +1,5 @@
 nav.navbar.navbar-default.navbar-fixed-top
-    .container.animated.fadeIn
+    .container-fluid.animated.fadeIn
         .navbar-header
             button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar-top", aria-expanded="false")
                 span.sr-only Toggle navigation
@@ -11,3 +11,6 @@ nav.navbar.navbar-default.navbar-fixed-top
         .collapse.navbar-collapse(id="navbar-top")
             ul.nav.navbar-nav.navbar-right
                 li: a(href="/", data-toggle="collapse", data-target=".navbar-collapse.in") Home
+                li: a(href="/features", data-toggle="collapse", data-target=".navbar-collapse.in") Features
+                li: a(href="/services", data-toggle="collapse", data-target=".navbar-collapse.in") Services
+                li: a(href="/contact", data-toggle="collapse", data-target=".navbar-collapse.in") Contact Us

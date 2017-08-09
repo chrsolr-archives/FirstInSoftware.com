@@ -41,3 +41,17 @@ section.features {
     padding-top: spacing(10);
     padding-bottom: spacing(10);
 }
+
+section.about-products {
+    background-color: $color-brand-primary;
+    padding-top: spacing(10);
+    padding-bottom: spacing(10);
+    color: $color-white;
+    font-style: italic;
+    text-align: center;
+}
+
+section.testimonios {
+    background-color: $color-white;
+    position: relative;
+}

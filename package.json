@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
+    "watch": "gulp watch-sass",
     "postinstall": "bower cache clean && bower install"
   },
   "author": "Christian Soler",

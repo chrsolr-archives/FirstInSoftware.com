@@ -42,4 +42,8 @@ gulp.task('watch-sass', () =>
     gulp.watch('./src/sass/**/*.scss', ['minify-autoprefixer'])
 );
 
+gulp.task('watch-views', () =>
+    gulp.watch('./src/views/**/*.pug', ['view-home'])
+);
+
 gulp.task('default', ['view-home', 'minify-autoprefixer', 'move-assets']);

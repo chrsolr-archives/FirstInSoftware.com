@@ -13,7 +13,7 @@ html {
         .main-wrapper {
             min-height: spacing(20, vh);
             background-color: $color-bg-primary;
-            padding-top: $navbar-height + 20px;
+            padding-top: $navbar-height;
             position: relative;
             overflow: hidden;
         }

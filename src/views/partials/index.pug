@@ -2,5 +2,18 @@ extends ../layout.pug
 
 block content
     section.banner
+        img.img-responsice(src="./assets/home-banner.jpg", alt="Home Banner", width="100%")
+        .dot-matrix
+        .content
+            span.title Reponder
+                span 360
+            span.subtitle COMPLETE INCIDENT RESPONSE SOFTWARE FOR FIRST RESPONDERS AVAILABLE ON ANY DEVICE
 
-    .row    
+    section.features.container
+        .row
+            each item in self.features
+                .col-md-4.col-sm-6
+                    .features-card
+                        img.center-block.text-center(src=item.img_location, alt=item.title)
+                        span.title #{item.title}
+                        span.description #{item.description}

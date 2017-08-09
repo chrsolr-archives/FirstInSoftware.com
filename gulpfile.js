@@ -33,4 +33,13 @@ gulp.task('minify-autoprefixer', ['sass-compile'], () =>
         .pipe(gulp.dest(config.paths.CSS))
 );
 
-gulp.task('default', ['view-home', 'minify-autoprefixer']);
+gulp.task('move-assets', () =>
+    gulp.src(['./src/assets/**.*'], { base: 'src/' })
+        .pipe(gulp.dest('./dist'))
+);
+
+gulp.task('watch-sass', () =>
+    gulp.watch('./src/sass/**/*.scss', ['minify-autoprefixer'])
+);
+
+gulp.task('default', ['view-home', 'minify-autoprefixer', 'move-assets']);

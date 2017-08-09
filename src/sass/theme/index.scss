@@ -2,4 +2,42 @@
 
 section.banner {
     background-color: $color-white;
+    position: relative;
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        span.title {
+            color: $color-white;
+            text-transform: uppercase;
+            text-align: center; 
+            font-size: spacing(1.2, vw);
+            font-weight: $font-weight-thin;
+            display: block;
+            border-bottom: 1px solid white;
+            margin-bottom: spacing(4);
+
+            span {
+                color: $color-brand-accent;
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        span.subtitle {
+            color: $color-white;
+            text-transform: uppercase;
+            text-align: center; 
+            font-size: spacing(0.3, vw);
+            font-weight: $font-weight-thin;
+            display: block;
+        }
+    }
+}
+
+section.features {
+    padding-top: spacing(10);
+    padding-bottom: spacing(10);
 }

@@ -9,6 +9,7 @@ section.banner {
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
+        z-index: 3;
 
         span.title {
             color: $color-white;
@@ -37,21 +38,102 @@ section.banner {
     }
 }
 
-section.features {
+section.features, section.tags, section.about-products {
     padding-top: spacing(10);
     padding-bottom: spacing(10);
 }
 
 section.about-products {
-    background-color: $color-brand-primary;
-    padding-top: spacing(10);
-    padding-bottom: spacing(10);
-    color: $color-white;
-    font-style: italic;
+    position: relative;
+    background-color: #f1f1f1;
+    color: $color-secondary-text;
+    font-weight: $font-weight-light;
     text-align: center;
+
+    img {
+        margin-bottom: spacing(6);
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            text-align: center;
+            display: inline-block;
+            padding: 0 spacing(6);
+        }
+    }
 }
 
 section.testimonios {
-    background-color: $color-white;
     position: relative;
+    overflow: hidden;
+    background-color: $color-white;
+    height: 300px;
+
+    .carousel {
+        position: absolute;
+        top: 0;
+        height: 300px !important;
+        width: 100%;
+        z-index: 3;
+
+        .carousel-inner {
+            height: 300px !important;
+
+            .item {
+                height: 300px !important;
+            }
+        }
+    }
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+
+        p {
+            color: $color-white;
+            text-align: center;
+            font-style: italic;
+            text-transform: uppercase;
+
+            &:nth-child(1) {
+                font-weight: $font-weight-thin;
+            }
+            
+            &:nth-child(2) {
+                font-size: 1.5rem;
+                font-weight: $font-weight-bold;
+            } 
+        }
+    }
+}
+
+section.tags {
+    color: $color-secondary-text;
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: $font-weight-regular;
+        padding-bottom: spacing(2);
+        margin: spacing(8) 0 spacing(4);
+        border-bottom: 1px solid $color-divider;
+    }
+
+    h4 {
+        font-weight: $font-weight-regular;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            font-weight: $font-weight-light;
+            padding: spacing(4) 0;
+        }
+    }
 }

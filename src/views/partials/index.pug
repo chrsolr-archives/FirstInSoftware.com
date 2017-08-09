@@ -3,7 +3,7 @@ extends ../layout.pug
 block content
     section.banner
         img.img-responsice(src="./assets/home-banner.jpg", alt="Home Banner", width="100%")
-        .dot-matrix
+        .gradient-light-blue
         .content
             span.title Reponder
                 span 360
@@ -19,17 +19,42 @@ block content
                         span.description #{item.description}
 
     section.about-products
-        .row
-            .container
-                .col-sm-6
-                .col-sm-6
-                    p Responder360 is the complete incident reponse system for first responders that runs on any device.  The “all-in-one” interface enables users to quickly and easily find dispatched locations, view incident data, pre-plans, hydrant locations, other responding apparatus, and much more!  A multi-jurisdictional system that enables greater collaboration between mutual aid departments by easily sharing information.
-            .row
-                .container
-                    .col-sm-6
-                        p Improve real time situational awareness in the field to help increase response safety, reduce response times and improve operational efficiency by getting critical data into the responder’s hands while en route or on scene.
-                    .col-sm-6
-    
+        .container
+            img.center-block(src="./assets/logo.png", alt='Logo')
+            p Responder360 is the complete incident reponse system for first responders that runs on any device.  The “all-in-one” interface enables users to quickly and easily find dispatched locations, view incident data, pre-plans, hydrant locations, other responding apparatus, and much more!  A multi-jurisdictional system that enables greater collaboration between mutual aid departments by easily sharing information.
+            p CADDirect is a revolutionary technology that allows you to directly connect to your CAD system from any device.  There is no need to send SMS or email to a third party system, the data comes directly from your CAD system and enables real time updates of all incident data including notes, apparatus status and optional status switching!
+            p The interface has a look and feel that is familiar to most users. Designed and tested in the field by firefighters and EMS, features were designed with the first responder in mind. Large buttons and simple functionality make it easy for the responder to access information they need in one integrated solution.
+            p Improve real time situational awareness in the field to help increase response safety, reduce response times and improve operational efficiency by getting critical data into the responder’s hands while en route or on scene.
+
+            ul
+                li: span: i.fa.fa-2x.fa-android(aria-hidden="true")
+                li: span: i.fa.fa-2x.fa-apple(aria-hidden="true")
+                li: span: i.fa.fa-2x.fa-windows(aria-hidden="true")
+
     section.testimonios
-        img.img-responsice(src="./assets/bg1.jpg", alt="Wallpaper", width="100%")
-        .dot-matrix
+        img.img-responsive(src="./assets/bg1.jpg", alt="Wallpaper", width="100%")
+        .gradient-light-blue
+        #testimonios-carousel.carousel.slide(data-ride="carousel")
+            .carousel-inner(role="listbox")
+                -var counter = 0;
+
+                each item in self.testimonios
+                    if counter === 0
+                        .item.active
+                            .content
+                                p "#{item.content}"
+                                p #{item.author}
+                    else 
+                        .item
+                            .content
+                                p "#{item.content}"
+                                p #{item.author}
+                    -counter++;
+
+    section.tags
+        .container
+            h3 Interactive map that enables first responders to manage incidents with improved
+
+            each item in self.tags
+                h4  #{item.title}
+                ul: li #{item.description}

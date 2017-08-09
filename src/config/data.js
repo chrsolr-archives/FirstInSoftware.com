@@ -30,6 +30,38 @@ module.exports = (() => {
                 title: 'Desktop / Mobile',
                 description: 'Works on all platforms and every major phone, tablet and PC. Windows, iPad, iPhone, Android and more!'
             }
+        ],
+        tags: [
+            {
+                title: 'Situational Awareness',
+                description: 'View pre-incident plans, hazards, hydrant locations, AVL and other data including mutual aid. All in one system!'
+            },
+            {
+                title: 'Operations',
+                description: 'Incident location(s) mapping, integrated GPS display and routing for improved response times, AVL for improved resource tracking'
+            },
+            {
+                title: 'Mutual Aid Support and Collaboration',
+                description: 'Interoperable with mutual aid agencies, including Fire, EMS, Police, and Emergency Management, to easily view apparatus locations and share data such as pre-plans, hydrants, etc.'
+            },
+            {
+                title: 'Integrated CAD Systems',
+                description: 'Host mutual aid agencies that operate on different CAD systems, each agency has secure access to their CAD system'
+            }
+        ],
+        testimonios: [
+            {
+                author: 'Asst. Chief John Landry, Westlake FD',
+                content: 'Responder360 is very user friendly, helped cut our response times and client support is outstanding! Highly recommend Responder360 to all emergency responders.'
+            },
+            {
+                author: 'Chief Dan Shelor, Champions ESD',
+                content: 'Responder360 is an invaluable tool for us. Not only are our Chiefs able to see the apparatus responding to the call but our units are able to see other apparatus responding so the potential for intersection collisions is reduced. Additionally, being able to locate the nearest hydrant or finding that elusive apartment building in the middle of the night has been a huge help. I highly recommend Responder360.'
+            },
+            {
+                author: 'Chief Fred Windisch, Ponderosa FD',
+                content: 'We are very pleased with Responder360. I have to admit at first knowledge of the product I was somewhat skeptical, but Responder360 is an effective incident management tool and upgrades are transparent to the user. We had a huge success at a large RV storage fire in July 2012. Our IC "followed" the incoming apparatus to establish a 1,500 feet 5 inch relay from a hydrant. He "saw" which engine would be next and he assigned them to pump the plug. The third engine laid out its 1,000 feet of hose to the relay pumper at the scene and then continued to the fire where the attack engine was working. The fourth engine laid out the final 500 feet from the relay pumper and connected to the second engine that fed the attack engine. This all happened within MINUTES because the IC had the opportunity to SEE the roads, facility via Google Earth, the hydrant locations, incoming apparatus and apparatus locations. It doesn\'t get any better than that!'
+            },
         ]
     };
 

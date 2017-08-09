@@ -9,7 +9,7 @@
     @include bottom-shadow;
 
     .navbar-brand {
-        line-height: spacing(10);
+        line-height: $navbar-height;
         font-weight: $font-weight-bold;
     }
 
@@ -87,13 +87,11 @@
     }
 
     .nav.navbar-nav.navbar-right {
-        line-height: $navbar-height;
-        
         li {
 
             a {
                 color: $color-secondary-text;
-                line-height: spacing(10);
+                line-height: $navbar-height; 
                 position: relative;
                 text-transform: uppercase;
 
@@ -136,6 +134,13 @@
                     }
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .navbar-brand {
+            line-height: 50px;
+            font-weight: $font-weight-bold;
         }
     }
 }

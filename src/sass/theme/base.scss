@@ -9,11 +9,11 @@ html {
         font-family: $montserrat;
         font-weight: $font-weight-regular;
         font-size: $font-size-base;
+        padding-top: $navbar-height;
 
         .main-wrapper {
             min-height: spacing(20, vh);
             background-color: $color-bg-primary;
-            padding-top: $navbar-height;
             position: relative;
             overflow: hidden;
         }

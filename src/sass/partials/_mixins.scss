@@ -1,5 +1,5 @@
 @mixin bottom-shadow() {
-    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 @mixin animation-delay($args) { 

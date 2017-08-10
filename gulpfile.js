@@ -9,11 +9,17 @@ const glp = require('gulp-load-plugins')({
 });
 
 gulp.task('view-home', () =>
-    gulp.src('./src/views/partials/*.pug')
+    gulp.src('./src/views/partials/index.pug')
         .pipe(glp.pug({
             self: true,
             locals: data.home,
         })).pipe(gulp.dest('./dist'))
+);
+
+gulp.task('compile-base-template', () =>
+    gulp.src('./src/views/partials/base_template.pug')
+        .pipe(glp.pug({pretty: true }))
+        .pipe(gulp.dest('./dist/html/'))
 );
 
 gulp.task('sass-compile', () =>
@@ -35,7 +41,7 @@ gulp.task('minify-autoprefixer', ['sass-compile'], () =>
 );
 
 gulp.task('js-compile', () =>
-    gulp.src(['./src/js/home.js'])
+    gulp.src(['./src/js/now-ui-kit.js','./src/js/home.js'])
         .pipe(glp.concat('script.js'))
         .pipe(gulp.dest('./dist/js/'))
         .pipe(glp.rename('script.min.js'))

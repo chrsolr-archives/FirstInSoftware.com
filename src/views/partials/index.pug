@@ -1,68 +1,69 @@
 extends ../layout.pug
+include ../mixins/_categories_feature.pug
+include ../mixins/_main_header.pug
 
 block content
-    section.home-banner
-        .bg-image
-        .gradient-brand
-        .dot-matrix
-        .content
-            h2
-                span Responder
-                span 360
+    +main_header('./assets/img/home-banner.jpg', './assets/img/logo.png', 'Responder360', 'Software for First Responders')
+    
+    section(class="section text-center")
+        div(class="container")
+            h2(class="title") Features
+            div(class="separator separator-primary")
+            div(class="row")
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
+                div(class="col-lg-4 col-sm-6")
+                    +feature('./assets/pre-planning-thumb.png', 'Title', 'Subtitle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus maiores quia ab voluptatibus, quisquam eum, aperiam! Illo sed modi unde ab nulla, non totam a illum omnis debitis commodi explicabo!')
 
-            p COMPLETE INCIDENT RESPONSE SOFTWARE FOR FIRST RESPONDERS AVAILABLE ON ANY DEVICE
-            .text-center
-                a.btn.btn-transparent(href="/contact") Request a Demo
+    section(class="section")
+        div(class="page-header page-header-small bg-primary", filter-color="brand")
+            div(class="container")
+                div(class="content-center")
+                    h3(class="title") Title
+                    p(class="category") Subtitle
+                    div(class="content")
+                        div(class="social-description")
+                            h2 26
+                            p Comments
+                            div(class="separator separator-primary")
+                        div(class="social-description")
+                            h2 26
+                            p Comments
+                            div(class="separator separator-primary")
+                        div(class="social-description")
+                            h2 26
+                            p Comments
+                            div(class="separator separator-primary")
 
-    section.features
-        .container
-            .row
-                each item in self.features
-                    .col-md-4.col-sm-6
-                        .features-card.hide-element
-                            img.center-block(src=item.img_location, alt=item.title)
-                            h4 #{item.title}
-                            p #{item.description}
-
-    section.about
-        .container
-            img.center-block(src="./assets/logo.png", alt='Logo')
-            h2 Replace your traditional clunky MDC software!
-            p Responder360 is the complete incident reponse system for first responders that runs on any device.  The “all-in-one” interface enables users to quickly and easily find dispatched locations, view incident data, pre-plans, hydrant locations, other responding apparatus, and much more!  A multi-jurisdictional system that enables greater collaboration between mutual aid departments by easily sharing information.
-            p CADDirect is a revolutionary technology that allows you to directly connect to your CAD system from any device.  There is no need to send SMS or email to a third party system, the data comes directly from your CAD system and enables real time updates of all incident data including notes, apparatus status and optional status switching!
-            p The interface has a look and feel that is familiar to most users. Designed and tested in the field by firefighters and EMS, features were designed with the first responder in mind. Large buttons and simple functionality make it easy for the responder to access information they need in one integrated solution.
-            p Improve real time situational awareness in the field to help increase response safety, reduce response times and improve operational efficiency by getting critical data into the responder’s hands while en route or on scene.
-
-            ul
-                li: span: i.fa.fa-2x.fa-android(aria-hidden="true")
-                li: span: i.fa.fa-2x.fa-apple(aria-hidden="true")
-                li: span: i.fa.fa-2x.fa-windows(aria-hidden="true")
-
-    section.testimonios
-        .bg-image
-        .gradient-brand
-        .dot-matrix
-        #testimonios-carousel.carousel.slide(data-ride="carousel")
-            .carousel-inner(role="listbox")
-                -var counter = 0;
-
-                each item in self.testimonios
-                    if counter === 0
-                        .item.active
-                            .content
-                                p "#{item.content}"
-                                h2 #{item.author}
-                    else 
-                        .item
-                            .content
-                                p "#{item.content}"
-                                h2 #{item.author}
-                    -counter++;
-
-    section.tags
-        .container
-            h3 Interactive map that enables first responders to manage incidents with improved
-
-            each item in self.tags
-                h4  #{item.title}
-                ul: li #{item.description}
+    section(class="section")
+        div(id="carousel-testimonials", class="carousel slide")
+            ol(class="carousel-indicators")
+                li(data-target="#carousel-testimonials", data-slide-to="0", class="active")
+                li(data-target="#carousel-testimonials", data-slide-to="1", class="")
+            
+            div(class="carousel-inner", role="listbox")
+                div(class="carousel-item active")
+                    img(class="d-block", src="./assets/img/bg1.jpg", alt="Testimonials")
+                    div(class="bg-dropback")
+                    div(class="carousel-caption d-none d-md-block")
+                        h2 Nature, United States
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aperiam veniam distinctio recusandae unde eius cupiditate vitae et at, veritatis, ipsum provident. Perferendis porro magni repellendus officiis unde cupiditate, tempora.
+                div(class="carousel-item")
+                    img(class="d-block", src="./assets/img/home-banner.jpg", alt="Testimonials")
+                    div(class="bg-dropback")
+                    div(class="carousel-caption d-none d-md-block")
+                        h2 Nature, United States
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione corporis laboriosam repudiandae exercitationem at architecto deleniti aliquid minus ullam, est corrupti animi inventore, saepe error vel odit. Voluptatum, odit, culpa.
+            
+            a(class="carousel-control-prev", href="#carousel-testimonials", role="button", data-slide="prev")
+                i(class="fa fa-4x fa-angle-left")
+            a(class="carousel-control-next", href="#carousel-testimonials", role="button", data-slide="next")
+                i(class="fa fa-4x fa-angle-right")

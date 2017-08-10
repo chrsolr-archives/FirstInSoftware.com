@@ -13,6 +13,7 @@ gulp.task('view-home', () =>
         .pipe(glp.pug({
             self: true,
             locals: data.home,
+            pretty: true
         })).pipe(gulp.dest('./dist'))
 );
 
@@ -20,6 +21,12 @@ gulp.task('compile-base-template', () =>
     gulp.src('./src/views/partials/base_template.pug')
         .pipe(glp.pug({pretty: true }))
         .pipe(gulp.dest('./dist/html/'))
+);
+
+gulp.task('compile-views-components', () =>
+    gulp.src('./src/views/components/*.pug')
+        .pipe(glp.pug({pretty: true }))
+        .pipe(gulp.dest('./dist/html/components/'))
 );
 
 gulp.task('sass-compile', () =>

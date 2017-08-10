@@ -15,12 +15,16 @@
     background: linear-gradient(0deg, $color-black-gradient-opacity, $color-brand-primary-gradient-opacity);
 }
 
-// .bg-primary {
-//     background-color: $color-brand-primary !important;
-// }
+.bg-primary {
+    background-color: $color-brand-primary !important;
+}
+
+.bg-secondary {
+    background-color: $color-brand-secondary !important;
+}
 
 .navbar-collapse:before {
-    background: $brand-primary;
+    background: $color-brand-secondary;
 }
 
 .social-description {
@@ -28,7 +32,7 @@
     max-width: 150px;
     width: 145px;
     text-align: center;
-    margin: 15px 0 0px;
+    margin: 15px 10px;
 }
 
 .bg-dropback {

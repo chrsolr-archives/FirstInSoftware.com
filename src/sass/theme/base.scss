@@ -1,19 +1,40 @@
 @import "./partials/_utils";
-
 html {
     font-size: $font-size-base;
-
     body {
         background-color: $color-bg-primary;
         color: $color-primary-text;
         font-family: $montserrat;
         font-weight: $font-weight-regular;
         padding-top: $navbar-height;
-
         .main-wrapper {
             background-color: $color-bg-primary;
             position: relative;
             overflow: hidden;
+        }
+        footer {
+            padding: spacing(12) 0;
+            background-color: $color-brand-primary;
+            ul {
+                margin: 1rem 0;
+                padding: 0;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    padding: 0 spacing(2);
+                    font-size: 1rem;
+                    color: $color-white;
+                    a {
+                        color: $color-white;
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            color: $color-brand-accent;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }

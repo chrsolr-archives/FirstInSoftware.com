@@ -2,6 +2,7 @@
 
 const config = require('./src/config/config');
 const data = require('./src/config/data');
+const moment = require('moment');
 const gulp = require('gulp');
 const glp = require('gulp-load-plugins')({
     lazy: true

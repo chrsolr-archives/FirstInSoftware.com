@@ -39,8 +39,9 @@ block content
                 li: span: i.fa.fa-2x.fa-windows(aria-hidden="true")
 
     section.testimonios
-        img.img-responsive(src="./assets/bg1.jpg", alt="Wallpaper", width="100%")
-        .gradient-light-blue
+        .bg-image
+        .gradient-brand
+        .dot-matrix
         #testimonios-carousel.carousel.slide(data-ride="carousel")
             .carousel-inner(role="listbox")
                 -var counter = 0;
@@ -50,12 +51,12 @@ block content
                         .item.active
                             .content
                                 p "#{item.content}"
-                                p #{item.author}
+                                h2 #{item.author}
                     else 
                         .item
                             .content
                                 p "#{item.content}"
-                                p #{item.author}
+                                h2 #{item.author}
                     -counter++;
 
     section.tags

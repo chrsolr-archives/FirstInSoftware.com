@@ -16,4 +16,9 @@ $(function () {
                 $(this).addClass('animated fadeIn');
         });
     });
+
+    $('.carousel').carousel({
+        interval: 3500,
+        pause: null
+    })
 });

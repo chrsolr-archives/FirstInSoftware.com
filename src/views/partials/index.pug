@@ -19,12 +19,12 @@ block content
             .row
                 each item in self.features
                     .col-md-4.col-sm-6
-                        .features-card
+                        .features-card.hide-element
                             img.center-block(src=item.img_location, alt=item.title)
                             h4 #{item.title}
                             p #{item.description}
 
-    section.about-products
+    section.about
         .container
             img.center-block(src="./assets/logo.png", alt='Logo')
             h2 Replace your traditional clunky MDC software!

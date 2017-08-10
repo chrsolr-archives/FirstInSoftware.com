@@ -1,6 +1,4 @@
 @import "./partials/_utils";
-
-
 .dot-matrix {
     background: url("../assets/dot.png");
     height: 100%;
@@ -44,4 +42,8 @@ p {
         background-color: $color-white;
         color: $color-brand-primary;
     }
+}
+
+.hide-element {
+    opacity: 0;
 }

@@ -45,9 +45,10 @@
 }
 
 .features {
+    overflow: hidden;
     .features-card {
         margin: spacing(12);
-        min-height: 270px;
+        min-height: 280px;
         img {
             height: 128px;
             width: 128px;
@@ -67,19 +68,25 @@
     }
 }
 
-section.about-products {
-    position: relative;
-    background-color: $color-brand-secondary;
+.about {
+    background-color: $color-brand-primary;
     color: $color-white;
-    font-weight: $font-weight-light;
-    text-align: center;
+    padding: spacing(12) 0;
     img {
         margin-bottom: spacing(6);
     }
+    h2 {
+        text-align: center;
+        margin: 1rem 0 0 0;
+    }
+    p {
+        font-weight: $font-weight-light;
+    }
     ul {
         margin: 0;
-        padding: 0;
+        padding: 2rem 0 0 0;
         list-style: none;
+        text-align: center;
         li {
             text-align: center;
             display: inline-block;

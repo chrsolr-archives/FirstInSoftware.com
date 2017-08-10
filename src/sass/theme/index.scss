@@ -1,64 +1,85 @@
 @import "./partials/_utils";
-
-section.banner {
-    background-color: $color-white;
+.home-banner {
     position: relative;
-
+    min-height: 100vh;
+    .bg-image {
+        background: url(../assets/home-banner.jpg) no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+    }
     .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
-        z-index: 3;
-
-        span.title {
-            color: $color-white;
-            text-transform: uppercase;
-            text-align: center; 
-            font-size: spacing(1.2, vw);
-            font-weight: $font-weight-thin;
-            display: block;
+        z-index: 4;
+        text-transform: uppercase;
+        color: $color-white;
+        text-align: center;
+        h2 {
+            font-size: 4rem;
             border-bottom: 1px solid white;
-            margin-bottom: spacing(4);
-
-            span {
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            font-weight: $font-weight-thin;
+            span:last-child {
                 color: $color-brand-accent;
                 font-weight: $font-weight-bold;
             }
         }
-
-        span.subtitle {
-            color: $color-white;
-            text-transform: uppercase;
-            text-align: center; 
-            font-size: spacing(0.3, vw);
+        p {
             font-weight: $font-weight-thin;
-            display: block;
+            font-size: 1.2rem;
+        }
+        @include media-phone {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        @include media-iphone-retina {
+            h2 {
+                font-size: 2.5rem;
+            }
         }
     }
 }
 
-section.features, section.tags, section.about-products {
-    padding-top: spacing(10);
-    padding-bottom: spacing(10);
+.features {
+    .features-card {
+        margin: spacing(12);
+        min-height: 270px;
+        img {
+            height: 128px;
+            width: 128px;
+        }
+        h4 {
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: $font-weight-regular;
+            color: $color-primary-text;
+            margin: 1rem 0 0 0;
+        }
+        p {
+            text-align: center;
+            font-weight: $font-weight-light;
+            color: $color-secondary-text;
+        }
+    }
 }
 
 section.about-products {
     position: relative;
     background-color: $color-brand-secondary;
-    color: $color-white; 
+    color: $color-white;
     font-weight: $font-weight-light;
     text-align: center;
-
     img {
         margin-bottom: spacing(6);
     }
-
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
-
         li {
             text-align: center;
             display: inline-block;
@@ -72,50 +93,42 @@ section.testimonios {
     overflow: hidden;
     background-color: $color-white;
     height: 400px;
-
     .carousel {
         position: absolute;
         top: 0;
         height: 400px !important;
         width: 100%;
         z-index: 3;
-
         .carousel-inner {
             height: 400px !important;
-
             .item {
                 height: 400px !important;
             }
         }
     }
-
     .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
-
         p {
             color: $color-white;
             text-align: center;
             font-style: italic;
             text-transform: uppercase;
-
             &:nth-child(1) {
                 font-weight: $font-weight-thin;
             }
-            
             &:nth-child(2) {
                 font-size: 1.5rem;
                 font-weight: $font-weight-bold;
-            } 
+            }
         }
     }
 }
 
 section.tags {
     color: $color-secondary-text;
-
     h3 {
         text-transform: uppercase;
         font-weight: $font-weight-regular;
@@ -123,14 +136,11 @@ section.tags {
         margin: spacing(8) 0 spacing(4);
         border-bottom: 1px solid $color-divider;
     }
-
     h4 {
         font-weight: $font-weight-regular;
     }
-
     ul {
         list-style: none;
-
         li {
             font-weight: $font-weight-light;
             padding: spacing(4) 0;

@@ -5,3 +5,38 @@
 @mixin animation-delay($args) { 
     animation-delay: $args; 
 }
+
+/* Large Devices, Wide Screens */
+@mixin media-large {
+  @media only screen and (min-width : 1200px) {
+    @content;
+  }
+}
+
+/* Medium Devices, Desktops */
+@mixin media-desktop {
+  @media only screen and (min-width : 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+/* Small Devices, Tablets */ 
+@mixin media-tablet {
+  @media only screen and (min-width : 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+/* Extra Small Devices, Phones */ 
+@mixin media-phone {
+  @media only screen and (min-width : 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+/* Custom, iPhone Retina */
+@mixin media-iphone-retina {
+  @media only screen and (min-width : 320px) and (max-width: 479px) {
+    @content;
+  }
+}

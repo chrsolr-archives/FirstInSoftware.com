@@ -9,7 +9,7 @@
     @include bottom-shadow;
 
     .navbar-brand {
-        line-height: $navbar-height;
+        line-height: spacing(10);
         font-weight: $font-weight-bold;
     }
 
@@ -91,7 +91,7 @@
 
             a {
                 color: $color-secondary-text;
-                line-height: $navbar-height; 
+                line-height: spacing(10); 
                 position: relative;
                 text-transform: uppercase;
 

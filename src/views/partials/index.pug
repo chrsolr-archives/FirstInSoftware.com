@@ -1,24 +1,28 @@
 extends ../layout.pug
 
 block content
-    section.banner
-        img.img-responsice(src="./assets/home-banner.jpg", alt="Home Banner", width="100%")
-        .gradient-light-blue
+    section.home-banner
+        .bg-image
+        .gradient-brand
+        .dot-matrix
         .content
-            span.title Reponder
+            h2
+                span Responder
                 span 360
-            span.subtitle COMPLETE INCIDENT RESPONSE SOFTWARE FOR FIRST RESPONDERS AVAILABLE ON ANY DEVICE
+
+            p COMPLETE INCIDENT RESPONSE SOFTWARE FOR FIRST RESPONDERS AVAILABLE ON ANY DEVICE
             .text-center
                 a.btn.btn-transparent(href="/contact") Request a Demo
 
-    section.features.container
-        .row
-            each item in self.features
-                .col-md-4.col-sm-6
-                    .features-card
-                        img.center-block.text-center(src=item.img_location, alt=item.title)
-                        span.title #{item.title}
-                        span.description #{item.description}
+    section.features
+        .container
+            .row
+                each item in self.features
+                    .col-md-4.col-sm-6
+                        .features-card
+                            img.center-block(src=item.img_location, alt=item.title)
+                            h4 #{item.title}
+                            p #{item.description}
 
     section.about-products
         .container

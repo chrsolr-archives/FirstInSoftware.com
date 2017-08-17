@@ -23,7 +23,7 @@ gulp.task('compile-base-template', () =>
         .pipe(gulp.dest('./dist/html/'))
 );
 
-gulp.task('compile-views-components', () =>
+gulp.task('compile-view-components', () =>
     gulp.src('./src/views/components/*.pug')
         .pipe(glp.pug({pretty: true }))
         .pipe(gulp.dest('./dist/html/components/'))
@@ -57,7 +57,7 @@ gulp.task('js-compile', () =>
 )
 
 gulp.task('move-assets', () =>
-    gulp.src(['./src/assets/**.*'], { base: 'src/' })
+    gulp.src(['./src/assets/**/*.*'], { base: 'src/' })
         .pipe(gulp.dest('./dist'))
 );
 

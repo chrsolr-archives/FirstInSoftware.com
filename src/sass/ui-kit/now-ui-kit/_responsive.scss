@@ -102,6 +102,20 @@
             }
         }
 
+        .dropdown{
+            .dropdown-item{
+                padding-left: 2.5rem;
+            }
+
+            .dropdown-menu{
+               display: none;
+           }
+
+           &.show .dropdown-menu{
+               display: block;
+           }
+        }
+
         .dropdown-menu .dropdown-item:focus,
         .dropdown-menu .dropdown-item:hover{
             color: $white-color;

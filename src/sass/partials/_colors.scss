@@ -1,6 +1,10 @@
-$color-brand-primary: rgb(122, 40, 40);
-$color-brand-secondary: rgb(167, 55, 55);
-$color-brand-accent: rgb(255, 193, 7);
+$color-brand-primary: rgb(50, 140, 193); // #328CC1
+$color-brand-secondary: rgb(11, 60, 93); // #0B3C5D
+$color-brand-accent: rgb(217, 179, 16); // #D9B310
+$color-brand-primary-font: rgb(29, 39, 49); // #1D2731
 
-$color-brand-primary-gradient-opacity: rgba(122, 40, 40, 0.6);
-$color-black-gradient-opacity: rgba(44, 44, 44, 0.2);
+$color-brand-primary-gradient-opacity: rgba(50, 140, 193, 0.4);
+$color-brand-secondary-gradient-opacity: rgba(11, 60, 93, 1);
+
+
+$brand-color: green !default;

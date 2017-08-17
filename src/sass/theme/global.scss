@@ -11,8 +11,8 @@
 }
 
 .page-header[filter-color="brand"] {
-    background: $color-black-gradient-opacity;
-    background: linear-gradient(0deg, $color-black-gradient-opacity, $color-brand-primary-gradient-opacity);
+    background: $color-brand-primary-gradient-opacity;
+    background: linear-gradient(0deg, $color-brand-secondary-gradient-opacity, $color-brand-primary-gradient-opacity);
 }
 
 .bg-primary {

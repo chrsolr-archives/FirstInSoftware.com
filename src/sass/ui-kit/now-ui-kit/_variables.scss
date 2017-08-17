@@ -16,7 +16,7 @@ $smoke-bg:                   #F5F5F5 !default;
 
 $black-bg:                   rgba(30,30,30,.97) !default;
 
-$black-color:                #2c2c2c !default;
+$black-color:                #1D2731 !default;
 $black-hr:                   #444444 !default;
 
 $light-gray:                 #E3E3E3 !default;
@@ -43,10 +43,10 @@ $default-color:              #B8B8B8 !default;
 $default-states-color:       darken($default-color, 5%) !default;
 $default-color-opacity:      rgba(182, 182, 182, .6) !default;
 
-$primary-color:              #f96332 !default;
+$primary-color:              #328CC1 !default;
 $primary-states-color:       darken($primary-color, 5%) !default;
-$primary-color-opacity:      rgba(249, 99, 50, .3) !default;
-$primary-color-alert:        rgba(249, 99, 50, .8) !default;
+$primary-color-opacity:      rgba(50, 140, 193, 0.4) !default;
+$primary-color-alert:        rgba(50, 140, 193, 0.8) !default;
 
 $success-color:              #18ce0f !default;
 $success-states-color:       darken($success-color, 5%) !default;

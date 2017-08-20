@@ -1,7 +1,6 @@
 'use strict';
 
 const config = require('./src/config/config');
-const data = require('./src/config/data');
 const moment = require('moment');
 const gulp = require('gulp');
 const glp = require('gulp-load-plugins')({
@@ -10,22 +9,19 @@ const glp = require('gulp-load-plugins')({
 
 gulp.task('view-home', () =>
     gulp.src('./src/views/partials/index.pug')
-        .pipe(glp.pug({
-            self: true,
-            locals: data.home,
-            pretty: true
-        })).pipe(gulp.dest('./dist'))
+        .pipe(glp.pug({ pretty: true }))
+        .pipe(gulp.dest('./dist'))
 );
 
 gulp.task('compile-base-template', () =>
     gulp.src('./src/views/partials/base_template.pug')
-        .pipe(glp.pug({pretty: true }))
+        .pipe(glp.pug({ pretty: true }))
         .pipe(gulp.dest('./dist/html/'))
 );
 
 gulp.task('compile-view-components', () =>
     gulp.src('./src/views/components/*.pug')
-        .pipe(glp.pug({pretty: true }))
+        .pipe(glp.pug({ pretty: true }))
         .pipe(gulp.dest('./dist/html/components/'))
 );
 
@@ -48,7 +44,7 @@ gulp.task('minify-autoprefixer', ['sass-compile'], () =>
 );
 
 gulp.task('js-compile', () =>
-    gulp.src(['./src/js/now-ui-kit.js','./src/js/home.js'])
+    gulp.src(['./src/js/now-ui-kit.js', './src/js/home.js'])
         .pipe(glp.concat('script.js'))
         .pipe(gulp.dest('./dist/js/'))
         .pipe(glp.rename('script.min.js'))
